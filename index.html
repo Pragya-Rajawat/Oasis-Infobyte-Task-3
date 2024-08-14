@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f71b265d60.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+   <div class="container">
+    <nav>
+        <img src="my logo.jpg" class="logo">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </nav>
+      <div class="header-text">
+        <p>Full Stack Developer</p>
+        <h1>Hi,I'am <span>Pragya</span></h1>
+      </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="my new pic.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class ="sub-title">About Me</h1>
+                <p>I am a final-year student pursuing B.Tech in Information Technology at Galgotias College of Engineering and Technology. I am passionate about learning data structures, algorithms, and exploring new technologies. My development experience primarily focuses on the MERN stack, though I am open to working with different tech stacks as well. I strongly believe in the value of teamwork and thrive in a cooperative environment.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab " id="skills">
+                    <ul>
+                        <li><span>Javascript, CSS, HTML ,node.js, express.js, SQL, MongoDb</span></li>
+                        <li><span>Java Programming</span></li>
+                        <li><span>Full Stack Developer</span><br>Making Web Applications using MERN stack </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span> Currently Persuing B.tech from</span><br>Galgotia's College of Engineering and Technology </li>
+                        <li><span>12th </span><br>83.5%</li>
+                        <li><span>10th</span><br>92.6% </li>
+                        <li><span>Current CGPA</span><br>7.56</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+<!------about Services---------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+             <div>
+                
+                <h2>Responsive Web Page Designing</h2>
+                <p>With my development skills, I am proficient in creating responsive web pages that seamlessly integrate both front-end and back-end technologies. This ensures a user-friendly experience while delivering robust and functional solutions tailored to meet the needs of users.</p>
+                <a href="#">Learn more</a>
+             </div>
+             <div>
+                <h2>Problem solving</h2>
+                <p>I have a strong interest in problem-solving through the application of data structures and algorithms, and emerging technologies. I am passionate about leveraging these tools to address and solve real-world challenges effectively.</p>
+                <a href="#">Learn more</a>
+             </div>
+             <div>
+                <h2>Projects making</h2>
+                <p>Leveraging my development skills, I have successfully completed various projects using the MERN stack, including a Simon Says game, Wanderlust, and the design of my personal portfolio. These projects showcase my ability to apply my expertise in creating dynamic and interactive web applications.</p>
+                <a href="#">Learn more</a>
+             </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+     var tablinks = document.getElementsByClassName("tab-links");
+     var tabcontents = document.getElementsByClassName("tab-contents");
+
+     function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+     }
+</script>
+</body>
+</html>
